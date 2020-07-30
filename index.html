@@ -103,7 +103,7 @@
     $(document).ready(function () {
         $('#c').on('click', function (ev) {
             $("#video")[0].src += "&autoplay=1";
-            $("#c")[0].style += "display:fixed;";
+            $("c").css({"display" : "fixed"});
             ev.preventDefault();
         });
     });
