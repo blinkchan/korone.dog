@@ -5,6 +5,19 @@
     <meta name="description" content="FUNNY DOG">
     <meta name="author" content="kymkdd">
     <style>
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
 @keyframes rainbow{
 		100%,0%{
 			color: rgb(255,0,0);
@@ -71,11 +84,10 @@
             flex-grow: 1;
         }
 	   video{
+		   position:fixed;
+		    overflow: hidden;
 margin:auto;
 border:0;
-width:100%;
-height:100%;
-object-fit:cover;
 	    }
     </style>
 </head>
@@ -91,6 +103,8 @@ object-fit:cover;
             <p>FUNNY DOG</p>
         </div>
     </div>
-<video src="https://i.fiery.me/uSkzN.webm" autoplay> 
+<video autoplay muted> 
+	<source url="https://i.fiery.me/uSkzN.webm" type="video/webm">
+</video>
 </body>
 </html>
